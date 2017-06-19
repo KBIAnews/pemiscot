@@ -164,3 +164,16 @@ article {
 
   }
 }
+
+.img-side{
+  max-width: 300px;
+  margin: 5px;
+  img{
+    max-width: 100%;
+  }
+}
+
+.img-side-right{
+  float: right;
+  margin-right: 300px;
+}
