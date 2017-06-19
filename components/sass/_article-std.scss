@@ -87,12 +87,20 @@ div.home-card-front{
 article {
   margin-top: 2rem;
 
+  div#head-paper{
+      background-image: url(../img/paper.jpg);
+  }
+
   div.article-head{
     padding-top: 27rem;
     padding-bottom: 3rem;
     margin-bottom: 2rem;
-    background-color: $kbia-bold-purple;
     color: $project-text-dark;
+
+    background-color: #666;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
 
     h1{
       @include constrained-content;
