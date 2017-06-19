@@ -1,15 +1,29 @@
-function resizeCards(){
-    $(".home-card").css("height", $(window).height() - 50 + "px")
-}
-
-var homeMap = {};
-
 $(document).ready(function(){
-    resizeCards();
+    function resizeCards(){
+        $(".home-card").css("height", $(window).height() - 50 + "px")
+    }
 
-    $('aside').fadeTo( 1000, 0 );
-});
+    var homeMap = {};
 
-$(document).scroll(function(){
-    $('aside:in-viewport').fadeTo( 1500, 1 );
+    var winHeight = $(window).height(), 
+    docHeight = $(document).height(),
+    progressBar = $('progress'),
+    max, value;
+
+    /* Set the max scrollable area */
+    max = docHeight - winHeight;
+    progressBar.attr('max', max);
+
+    $(document).ready(function(){
+        resizeCards();
+
+        $('aside').fadeTo( 1000, 0 );
+    });
+
+    $(document).scroll(function(){
+        $('aside:in-viewport').fadeTo( 1500, 1 );
+
+        value = $(window).scrollTop();
+        progressBar.attr('value', value);
+    });
 });
