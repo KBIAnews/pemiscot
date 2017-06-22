@@ -2,7 +2,7 @@ div.home-card-front{
   div.home-container{
 
     top: 50%;
-    transform: translateY(20%);
+    transform: translateY(50%);
 
     @include fade-in-page-load(1s, 0.2s);
 
@@ -26,10 +26,11 @@ div.home-card-front{
       margin-top: 1.5rem;
       margin-bottom: 2rem;
       font-size: 3.5rem;
+      font-weight: lighter;
 
       @media screen and (max-width: $small-screen-width){
         font-size: 1.8rem;
-        font-weight: lighter;
+
         margin-top: 0rem;
         margin-bottom: 1rem;
       }
