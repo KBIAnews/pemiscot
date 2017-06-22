@@ -33,7 +33,7 @@ a.back-link{
 }
 
 a{
-	color: $project-primary;
+	color: darken($project-primary, 20%);
 	text-decoration: none;
 
 	&:hover{

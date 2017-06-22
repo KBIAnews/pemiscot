@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://use.fontawesome.com/4cfb4dfef7.js"></script>
     <script
@@ -11,6 +12,7 @@
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>-->
     <script src="./js/cards.js"></script>
     <script src="./js/viewport.js"></script>
+
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -49,11 +51,11 @@
                 <h2 class="proj">A KBIA Special Project</h2>
                 <h2 class="author">By Bram Sable-Smith</h2>
             </div>
-            <a href="http://www.kbia.org" class="logo-link">
-                <img class="logo-right" src="./img/KBIA_main_reverse.png">
+            <a href="http://www.kbia.org" class="logo logo-link">
+                <img class="logo logo-right" src="./img/KBIA_main_reverse.png">
             </a>
-            <a href="http://www.sideeffectspublicmedia.org" class="logo-link">
-                <img class="logo-left" src="./img/se-white.png">
+            <a href="http://www.sideeffectspublicmedia.org" class="logo logo-link">
+                <img class="logo logo-left" src="./img/se-white.png">
             </a>
         </div>
     </div>
@@ -141,11 +143,26 @@
             <h1>Already on the Brink</h1>
             <p class="subtitle">Because of who they serve, rural hospitals remain particularly vulnerable to government funding changes.</p>
         </div>
+        <div class="emulate-p">
+            <div class="audio-player" id="story-player" data-mp3-url="https://s3.amazonaws.com/media.kbia.org/2017/june/pemiscot-medicaid/0531hospitalweb.mp3">
+                <div class="audio-player-wave">
+
+                </div>
+                <div class="audio-player-controls">
+                    <a class="audio-player-button audio-player-play enabled"><i class="fa fa-play" aria-hidden="true"></i> PLAY</a>
+                    <a class="audio-player-button audio-player-pause disabled"><i class="fa fa-pause" aria-hidden="true"></i> PAUSE</a>
+                    <a class="audio-player-button audio-player-stop disabled"><i class="fa fa-stop" aria-hidden="true"></i> STOP</a>
+                </div>
+            </div>
+        </div>
+
         <p>For the hundreds of rural hospitals struggling to stay in business, health policy decisions made in Washington D.C. this summer could make survival a lot tougher.</p>
         <p>Since 2010, at least <a href="http://www.shepscenter.unc.edu/programs-projects/rural-health/rural-hospital-closures/">79 rural hospitals</a> have closed across the country, and nearly <a href="https://www.ruralhealthweb.org/NRHA/media/Emerge_NRHA/PDFs/02-02-16PI16NRHAreleaseoniVantagestudy.pdf">700 more</a> are at risk of closing. These hospitals serve a largely older, poorer and sicker population than most, making them particularly vulnerable to changes made to Medicaid funding.</p>
         <p>“A lot of hospitals like ourselves that see a lot of the Medicaid population could get hurt,” says Kerry Noble, CEO of Pemiscot Memorial Health Systems, the public hospital in the poorest county in Missouri.</p>
         <p>The GOP’s American Health Care Act would cut Medicaid — the public insurance program for low-income children, elderly and disabled Americans —&nbsp; by $834 billion, which would result in 14 million more Americans being uninsured in the next 10 years. Even more could lose coverage under the budget proposed by President Donald Trump, which proposes an additional $610 billion in cuts to the program.</p>
-        <p>That’s a problem for small rural hospitals like Pemiscot Memorial, which are disproportionately dependent on Medicaid. The hospital serves an agricultural county that ranks worst in Missouri for <a href="http://www.countyhealthrankings.org/app/missouri/2017/rankings/pemiscot/county/outcomes/overall/snapshot">most health indicators </a>including premature deaths, quality of life and even adult smoking rates. Closing the county’s hospital could make those much worse.</p><p>But a rural hospital closure affects more than just healthcare. Jobs, property values, even schools can suffer. Pemiscot County already has the state’s <a href="http://www.countyhealthrankings.org/app/missouri/2017/measure/factors/23/data?sort=desc-4">highest</a> unemployment rate. Losing the hospital would mean losing the county’s largest employer.</p><p>“It would be devastating economically,” Noble says “Our annual payrolls are around $20 million a year.”</p>
+        <p>That’s a problem for small rural hospitals like Pemiscot Memorial, which are disproportionately dependent on Medicaid. The hospital serves an agricultural county that ranks worst in Missouri for <a href="http://www.countyhealthrankings.org/app/missouri/2017/rankings/pemiscot/county/outcomes/overall/snapshot">most health indicators </a>including premature deaths, quality of life and even adult smoking rates. Closing the county’s hospital could make those much worse.</p>
+        <p>But a rural hospital closure affects more than just healthcare. Jobs, property values, even schools can suffer. Pemiscot County already has the state’s <a href="http://www.countyhealthrankings.org/app/missouri/2017/measure/factors/23/data?sort=desc-4">highest</a> unemployment rate. Losing the hospital would mean losing the county’s largest employer.</p>
+        <p><span class="soundcite" data-url="http://media.kbia.org.s3.amazonaws.com/2017/june/pemiscot-medicaid/kerry_intextconsequences.mp3" data-start="0" data-end="24000" data-plays="1">“It would be devastating economically,” Noble says. “Our annual payrolls are around $20 million a year.”</span></p>
         <p>All of that weighs on Noble’s mind when he ponders the hospital’s future. Pemiscot Memorial&nbsp;has already struggled with its dependence on Medicaid for more than a decade. Its story is a lesson in how decisions made by state and federal lawmakers have put these small hospital’s on the edge of collapse.</p>
         <h2>Blueprints From a Happier Time</h2>
         <img class="img-side img-side-right" src="./img/noble.jpg" alt="Kerry Noble">
@@ -159,7 +176,7 @@
         <h2>A Lost Lifeline</h2>
         <p>The Affordable Care Act was supposed to help with the problem of uncompensated care. It offered rural hospitals a potential lifeline by giving states the option to expand Medicaid to a larger segment of their populations. In Missouri that would have covered about 300,000 people.</p>
         <p>“It was the fundamental building block [of the ACA] that was supposed to cover low-income Americans,” says St. Louis University health law professor Sidney Watson.</p><p>In Missouri Kerry Noble and&nbsp;Pemiscot&nbsp;Memorial became the poster children for Medicaid expansion. In 2013 Noble went to the state capital to&nbsp;<a href="http://news.stlpublicradio.org/post/mo-house-democrats-file-medicaid-expansion-bill">make the case</a>&nbsp;for expansion on behalf of the hospital.</p>
-        <p>“Our facility will no longer be in existence if this expansion does not occur,” Noble told a crowd at a press conference.</p><p>But the Missouri legislature voted against expansion. This was not good news for&nbsp;Pemiscot&nbsp;Memorial or the other rural hospitals in the state.</p>
+        <p>“[Our facility] will no longer be in existence if this expansion does not occur,” Noble <span class="soundcite" data-url="http://media.kbia.org.s3.amazonaws.com/2017/june/pemiscot-medicaid/kerry_intext_expansion.mp3" data-start="0" data-end="21000" data-plays="1">told the crowd</span> at a press conference.</p><p>But the Missouri legislature voted against expansion. This was not good news for&nbsp;Pemiscot&nbsp;Memorial or the other rural hospitals in the state.</p>
         <p>“Medicaid cuts are always hard to rural hospitals,” Watson says. “People have less employer-sponsored coverage in rural areas and people are relying more on Medicaid and on Medicare.”</p><p>Against all odds, though, Pemiscot County hospital is still in existence. At least for now.</p><p>To survive, the hospital had to cut some costly programs like obstetrics, outsourced others like their ambulance service and did without needed upgrades to their equipment. They also cobbled together some small grants, and in 2015 they did net a profit: $52,503.</p><p>“People might look at us and say, ‘See, you didn’t need Medicaid expansion. You’re still there,” Noble says. “But how long are we going to be here if we don’t get some relief?”</p>
         <h2>Future Threats: Funding Caps</h2>
         <p>Since it didn’t expand Medicaid, Missouri has less on the line with the proposed Medicaid funding rollbacks. But the GOP plan would still have serious repercussions.</p>
@@ -195,5 +212,9 @@
 <script>
 
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.min.js"></script>
+<script type='text/javascript' src='https://cdn.knightlab.com/libs/soundcite/latest/js/soundcite.min.js'></script>
+<script src="./js/siriwave.js"></script>
+<script src="./js/player.js"></script>
 </body>
 </html>

@@ -11,6 +11,12 @@ div.home-card-front{
 
       font-size: 5rem;
       text-align: center;
+
+      @media screen and (max-width: $small-screen-width){
+        margin-top: 3rem;
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+      }
     }
 
     h1.sub{
@@ -20,6 +26,13 @@ div.home-card-front{
       margin-top: 1.5rem;
       margin-bottom: 2rem;
       font-size: 3.5rem;
+
+      @media screen and (max-width: $small-screen-width){
+        font-size: 1.8rem;
+        font-weight: lighter;
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+      }
     }
 
     h2.proj{
@@ -33,7 +46,9 @@ div.home-card-front{
         border: none;
         display: block;
       }
-
+      @media screen and (max-width: $small-screen-width){
+        display: none;
+      }
     }
 
     h2.author{
@@ -47,6 +62,17 @@ div.home-card-front{
         border: none;
         display: block;
       }
+
+      @media screen and (max-width: $small-screen-width){
+        font-size: 1.8rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .logo{
+    @media screen and (max-width: $small-screen-width){
+      display: none;
     }
   }
 
@@ -76,12 +102,22 @@ div.home-card-front{
   max-width: 1400px !important;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 1450px){
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 @mixin constrained-content{
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 1100px){
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 article {
@@ -175,7 +211,7 @@ article {
 
 .img-side{
   max-width: 300px;
-  margin: 5px;
+  margin: 10px;
   img{
     max-width: 100%;
   }
@@ -184,6 +220,39 @@ article {
 .img-side-right{
   float: right;
   margin-right: 300px;
+
+  @media screen and (max-width: 1400px){
+    margin-right: 200px;
+  }
+
+  @media screen and (max-width: 1300px){
+    margin-right: 100px;
+  }
+
+  @media screen and (max-width: 1100px){
+      margin-right: 10px;
+  }
+
+  @media screen and (max-width: $small-screen-width){
+    float:none;
+    margin: 10px;
+    max-width: 100%;
+  }
+}
+
+.img-side-left{
+  float: right;
+  margin-left: 300px;
+
+  @media screen and (max-width: 1100px){
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: $small-screen-width){
+    float:none;
+    margin: 10px;
+    max-width: 100%;
+  }
 }
 
 progress{
