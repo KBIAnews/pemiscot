@@ -224,7 +224,7 @@ progress{
   background-color:transparent;
 
   color: $project-primary;
-  z-index:5;
+  z-index:99;
 }
 
 progress::-webkit-progress-bar {
