@@ -27,7 +27,7 @@ div.home-cards-contain{
 
       @include container;
       max-width: 1500px !important;
-      padding: 3rem;
+      padding: 2rem;
 
       @media screen and (max-width: $medium-screen-width) {
         padding: 1.5rem;
