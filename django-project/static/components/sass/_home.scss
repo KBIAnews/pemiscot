@@ -16,7 +16,7 @@ div.home-cards-contain{
   div.home-card-front{
     background-color: $gray-dark;
     background-blend-mode: multiply;
-    background: url(../img/pem-ext.jpg) no-repeat bottom center fixed;
+    // background: url(/static/columns-back.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -27,7 +27,7 @@ div.home-cards-contain{
 
       @include container;
       max-width: 1500px !important;
-      padding: 2rem;
+      padding: 3rem;
 
       @media screen and (max-width: $medium-screen-width) {
         padding: 1.5rem;
@@ -150,3 +150,24 @@ div.link-button-block{
   }
 }
 
+
+div.topics-listing{
+
+  div.topics-list{
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+
+    @include clearfix;
+
+    a {
+      color: $project-primary;
+
+      margin-right: 5px;
+      margin-bottom: 5px;
+
+      float: left;
+
+      @include outline-button($project-primary);
+    }
+  }
+}

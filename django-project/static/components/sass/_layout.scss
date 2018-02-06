@@ -31,12 +31,3 @@ a.back-link{
 	text-decoration: none;
 	color: $gray-light;
 }
-
-a{
-	color: darken($project-primary, 20%);
-	text-decoration: none;
-
-	&:hover{
-		text-decoration: underline;
-	}
-}

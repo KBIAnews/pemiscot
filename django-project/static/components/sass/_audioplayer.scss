@@ -9,10 +9,7 @@ div.audio-player{
   div.audio-player-controls{
     padding: 0.2rem 0.2rem;
     background-color: $gray-lighter;
-    a.audio-player-button{
-
-      color: $project-text;
-
+    .audio-player-button{
       padding-left: 0.5rem;
       padding-right: 0.5rem;
       margin-left: 0.5rem;

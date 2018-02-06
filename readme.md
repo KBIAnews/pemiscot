@@ -1,17 +1,30 @@
-# KBIA's Pemiscot Hospital Project
-The [KBIA](http://kbia.org/) and [Side Effects Public Media](http://sideeffectspublicmedia.org/) special project "Plan of Action" by Bram Sable-Smith, about the Pemiscot Memorial Hospital.
+# Plan of Action
+What does it take to keep a rural hospital in business?
 
-## Deployment
-This project uses Gulp.js, a toolkit for automated building and deployment. Here's what you need to do to get things going:
+This project is built on [Django Bakery](https://github.com/datadesk/django-bakery), a project pioneered by the LA Times Data Desk that takes complex Django sites and bakes them out as flat files.
 
-1. Make sure you have the base dependencies available. These include Node.js (Ideally 5 or greater), Gulp.js global (can be installed with `npm install -g gulp`) Python 2, some sort of bash shell and the AWS-CLI tool (only if you will be deploying to Amazon S3).
+## To Work on This Project
+Be sure you have the `kbia_bakery` environment variables set on your computer, you've made a [virtual environment](https://open.nytimes.com/set-up-your-mac-like-an-interactive-news-developer-bb8d2c4097e5?mcubz=1) and run `pip install requirements.txt` on the main folder.
 
-2. Clone this repository.
+Then, while in that virtual environment, you can easily run `python manage.py runserver` and get a functional version of the site running locally on your computer, ready for development or data input.
 
-3. Install all other dependencies. Navigate to the base project directory in your command line and enter `npm install`. This could take a little while, so go get a cup of coffee.
+One more note: There's a good chance you'll run across Markdown while working on this project. It's an alternative, super easy way to write text that compiles to HTML, and if you're ever confused, you can just ask [this Markdown learning tool](http://mdcheatsheet.com/) for advice.
 
-4. Make an initial build of the project: `gulp build`
+## To Deploy This Project
+Again, making sure you've got the KBIA settings inside your AWS CLI, run `python manage.py build` (no output means things went well), then quickly test everything still works on this flat-file version of the site by running `python manage.py buildserver` and looking around.
 
-5. At this point, if you want to see what you have put together, you can easily make your machine into a temporary staging server -- just navigate to the build directory in your bash shell and type `python -m SimpleHTTPServer 8989` (you can use any port number at the end of this command, but it's very unlikely you're running anything else taking port 8989). Now you can open a web browser and type `localhost:8989` to see a live version of the site hosted from your computer.
+At that point, you can deploy your project using Fabric by running `fab deploy`.
 
-6. Once you are ready to deploy, you can change this line in `gulpfile.js` to reflect your own profiles and upload destination on Amazon S3: `aws s3 cp build s3://apps.kbia.org/pemiscot-hospital --recursive --profile kbia`. After that, just run `gulp upload` to deploy to Amazon S3. If you want to deploy differently, you can simply move the contents of the build folder to your deployment destination. 
+__Unless you've otherwise been instructed, avoid using the Django Bakery's `publish` command, since that's really designed to publish to a TLD, and this is probably headed to [apps.kbia.org](http://apps.kbia.org/).__
+
+## Available Django Commands
+You can access these commands by using `python manage.py [command_here]`. It's an incomplete list, but it covers most of what you could want.
+
+|Command|Origin App|What It Does|
+|-------|----------|------------|
+|`runserver`|`django.contrib.staticfiles`|Creates a local WSGI server on your computer running the site.|
+|`collectstatic`|`django.contrib.staticfiles`|Collects and organizes the project's static files so they can be run and accessed by a server instance.|
+|`makemigrations`|Django System|Makes automated SQL migrations (written in Python) to update model tables.|
+|`migrate`|Django System|Runs SQL migrations (written in Python) to update model tables.|
+|`build`|`django-bakery`|Runs `collectstatic`, then builds a static site based on static views listed in `settings.py`.|
+|`buildserver`|`django-bakery`|Creates a Python SimpleHTTPServer of Django Bakery's build directory so you can check things out.|

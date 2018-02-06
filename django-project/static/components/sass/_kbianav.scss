@@ -33,7 +33,7 @@ div.container:first-of-type{
 		}
 
 		a.nav-trigger-button{
-			color: black;
+			margin-right: 1rem;
 		}
 
 	}
@@ -59,8 +59,6 @@ header {
 		border-radius: 0;
 		margin-top: 7px;
 		margin-right: 50px;
-
-		color: $project-text;
 
 		@include outline-button($project-primary);
 	}
